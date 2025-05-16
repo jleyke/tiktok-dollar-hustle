@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,20 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				gold: {
+					DEFAULT: '#daa520',
+					light: '#ffd700',
+					dark: '#b8860b'
+				},
+				dark: {
+					DEFAULT: '#121212',
+					lighter: '#1e1e1e',
+					light: '#2d2d2d'
+				},
+				cta: {
+					DEFAULT: '#0066ff',
+					hover: '#0052cc'
 				}
 			},
 			borderRadius: {
@@ -84,11 +99,37 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-gold': {
+					'0%, 100%': { 
+						boxShadow: '0 0 0 0 rgba(218, 165, 32, 0.4)' 
+					},
+					'50%': { 
+						boxShadow: '0 0 0 10px rgba(218, 165, 32, 0)' 
+					}
+				},
+				'float': {
+					'0%, 100%': { 
+						transform: 'translateY(0)' 
+					},
+					'50%': { 
+						transform: 'translateY(-10px)' 
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-gold': 'pulse-gold 2s infinite',
+				'float': 'float 3s ease-in-out infinite'
+			},
+			backgroundImage: {
+				'hero-pattern': "linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('/hero-bg.jpg')",
+				'gold-gradient': 'linear-gradient(90deg, #daa520, #ffd700, #b8860b)',
+			},
+			fontFamily: {
+				'sans': ['Inter', 'sans-serif'],
+				'display': ['Montserrat', 'sans-serif']
 			}
 		}
 	},
